@@ -1,0 +1,11 @@
+version: '3'
+services:
+  #Nginx Service
+  webserver:
+    image: nginx:alpine
+    container_name: webserver-test
+    restart: unless-stopped
+    volumes:
+      - "./html:/usr/share/nginx/html"
+    ports:
+      - "8084:80"
